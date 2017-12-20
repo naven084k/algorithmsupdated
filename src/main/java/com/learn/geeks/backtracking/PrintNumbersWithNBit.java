@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class PrintNumbersWithNBit {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter k to print k-ary numbers");
