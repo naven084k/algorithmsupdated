@@ -16,8 +16,8 @@ public class TreeTraversals {
 		postorderWith1Stack(Utils.getTree());
 	}
 	 
-	 public static void preorder(TreeNode root) {
-		 Stack<TreeNode> stack = new Stack<>();
+	 public static void preorder(Node root) {
+		 Stack<Node> stack = new Stack<>();
 		 while(true) {
 			 while (root != null) {
 				 System.out.print(root.value+" ");
@@ -34,8 +34,8 @@ public class TreeTraversals {
 		 }
 	 }
 	 
-	 public static void inorder(TreeNode root) {
-		 Stack<TreeNode> stack = new Stack<>();
+	 public static void inorder(Node root) {
+		 Stack<Node> stack = new Stack<>();
 		 while(true) {
 			 while (root != null) {
 				 stack.push(root);
@@ -50,9 +50,9 @@ public class TreeTraversals {
 		 }
 	 }
 	 
-	 public static void postorderWith2Stacks(TreeNode root) {
-		 Stack<TreeNode> stack1 = new Stack<>();
-		 Stack<TreeNode> stack2 = new Stack<>();
+	 public static void postorderWith2Stacks(Node root) {
+		 Stack<Node> stack1 = new Stack<>();
+		 Stack<Node> stack2 = new Stack<>();
 		 stack1.push(root);
 		 while(true) {
 			 while (root != null) {
@@ -79,15 +79,15 @@ public class TreeTraversals {
 		 }
 	 }
 	 
-	 public static void postorderWith1Stack(TreeNode root) {
-		 Stack<TreeNode> stack = new Stack<>();
-		 TreeNode current = root;
+	 public static void postorderWith1Stack(Node root) {
+		 Stack<Node> stack = new Stack<>();
+		 Node current = root;
 			 while (current != null || !stack.isEmpty()) {
 				 if(current != null) {
 					 stack.push(current);
 					 current = current.left;
 				 } else {
-					 TreeNode temp = stack.peek().right;
+					 Node temp = stack.peek().right;
 					 if(temp == null) {
 						 temp = stack.pop();
 						 System.out.print(temp.value+" ");
