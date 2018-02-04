@@ -1,4 +1,4 @@
-package com.learn.geeks.book.tree;
+package com.learn.geeks.tree;
 
 public class Node {
 	public  int value;

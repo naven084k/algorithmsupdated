@@ -1,4 +1,4 @@
-package com.learn.hackerrank.array;
+package com.learn.geeks.array;
 
 import java.util.Arrays;
 import java.util.Scanner;

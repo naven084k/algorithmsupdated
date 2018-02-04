@@ -1,4 +1,4 @@
-package com.learn.geeks.book.backtracking;
+package com.learn.geeks.backtracking;
 
 import java.util.Arrays;
 import java.util.Scanner;

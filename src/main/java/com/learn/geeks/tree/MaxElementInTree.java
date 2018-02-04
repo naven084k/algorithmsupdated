@@ -1,4 +1,4 @@
-package com.learn.geeks.book.tree;
+package com.learn.geeks.tree;
 
 import com.learn.geeks.Utils;
 

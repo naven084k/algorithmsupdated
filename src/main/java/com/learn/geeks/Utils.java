@@ -1,6 +1,6 @@
 package com.learn.geeks;
 
-import com.learn.geeks.book.tree.Node;
+import com.learn.geeks.tree.Node;
 
 public class Utils {
 
