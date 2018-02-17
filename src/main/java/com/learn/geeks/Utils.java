@@ -9,29 +9,29 @@ public class Utils {
 		root.value = 1;
 		
 		root.left = new Node();
-		root.left.value =6;
+		root.left.value = 2 ;
 		
 		root.right = new Node();
-		root.right.value =7;
+		root.right.value =3;
 		
 		root.left.left = new Node();
-		root.left.left.value =3;
+		root.left.left.value =4;
 		
 		root.left.right = new Node();
-		root.left.right.value =4;
+		root.left.right.value =5;
 		
 		root.right.left = new Node();
-		root.right.left.value =8;
+		root.right.left.value = 6;
 		
 		root.right.right = new Node();
-		root.right.right.value =9;
+		root.right.right.value = 7;
 		
 		/*  tree will be 
 		      1
 		      
-		   6      7
+		   2      3
 		    
-		3    4  8    9    
+		 4   5  6    7    
 		  
 		 */
 		
