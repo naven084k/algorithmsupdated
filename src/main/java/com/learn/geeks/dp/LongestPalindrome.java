@@ -1,4 +1,4 @@
-package com.learn.geeks.strings;
+package com.learn.geeks.dp;
 
 public class LongestPalindrome {
 
