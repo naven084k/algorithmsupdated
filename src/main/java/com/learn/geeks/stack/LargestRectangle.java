@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class LargestRectangle {
 	public static void main(String[] args) {
-		largestRectangleArea(new int[] {1,2,3,1,2});
+		largestRectangleArea(new int[] {2,3,4,1,4,1});
 	}
     public static int largestRectangleArea(int[] height) {
         int len = height.length;
