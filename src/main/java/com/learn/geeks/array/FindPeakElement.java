@@ -3,7 +3,7 @@ package com.learn.geeks.array;
 public class FindPeakElement {
 
 	public static void main(String[] args) {
-		int arr[] = {42,41,40,39};
+		int arr[] = {14,15,10,9,13,16};
 		//findPeakElementBruteForce(arr);
 		findPeakElement(arr);
 	}

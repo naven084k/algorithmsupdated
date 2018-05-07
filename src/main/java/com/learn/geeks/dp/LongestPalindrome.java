@@ -34,7 +34,6 @@ public class LongestPalindrome {
 				}
 			}
 		}
-		int i=1000000;
 		System.out.println(str.substring(start, start+maxLength));
 	}
 }

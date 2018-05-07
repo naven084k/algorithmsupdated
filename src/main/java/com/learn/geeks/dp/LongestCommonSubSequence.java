@@ -21,23 +21,18 @@ public class LongestCommonSubSequence {
 	}
 	
 	public static int longestCommonSubSequenceDynamic(String str1,String str2) {
-		int[][] T = new int[str1.length()+1][str2.length()+1];
-		int max=0;
+		int T[][]=new int[str1.length()+1][str2.length()+1];
+		
 		for(int i=1;i<T.length;i++) {
-			for(int j=1;j<T[i].length;j++) {
+			for(int j=1;j<T[0].length;j++) {
 				
-				if(str1.charAt(i-1) == str2.charAt(j-1)) {
-					T[i][j] = T[i-1][j-1]+1;
-				} else {
-					T[i][j] = Math.max(T[i][j-1], T[i-1][j]);
-				}
-				
-				if(T[i][j] > max){
-                    max = T[i][j];
-                }
+				if(str1.charAt(i-1) == str2.charAt(j-1))
+					T[i][j] = 1+T[i-1][j-1];
+				else
+					T[i][j] = Math.max(T[i-1][j], T[i][j-1]);
 			}
 		}
-		return max;
 		
+		return T[str1.length()][str2.length()];
 	}
 }
