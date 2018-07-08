@@ -3,24 +3,32 @@ package com.learn.geeks.array;
 public class RainWaterTrapping {
 
 	public static void main(String[] args) {
-		int arr[] = {1,5,2,3,1,7,2,4};
-		int[] rightMaxArr = new int[arr.length];
-		int maxSeenRight = 0;
-		for(int i=arr.length-1;i>=0;i--) {
-			if(arr[i] > maxSeenRight) {
-				maxSeenRight = arr[i];
-			} 
-			rightMaxArr[i] = maxSeenRight;
-		}
+		int a[] = {3, 0, 0, 2, 0, 4};
 		
-		int maxSeenLeft = 0;
-		int result = 0;
-		for(int i=0;i< arr.length;i++) {
-			result = result + Integer.max(Integer.min(rightMaxArr[i], maxSeenLeft)-arr[i], 0);
-			if(arr[i] > maxSeenLeft) {
-				maxSeenLeft = arr[i];
+		int l = 0; int r = a.length-1;
+		int leftmax = 0;
+		int rightmax = 0;
+		int result=0;
+		while(l<r) {
+			
+			if(a[l] < a[r]) {
+				
+				if(a[l] > leftmax )
+				   leftmax = a[l];
+				else 
+					result = result +(leftmax-a[l]);
+				
+				l++;
+			} else {
+				if(a[r] > rightmax )
+					rightmax = a[r];
+					else 
+						result = result +(rightmax-a[r]);
+				
+				r--;
 			}
 		}
+		
 		System.out.println(result);
 
 	}
